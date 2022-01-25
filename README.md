@@ -14,23 +14,23 @@ A simple tool to encode psvr video.
 ### Encode
 
 ```shell
-usage: psvr_encode.py [-h] -i INPUT [-p {psvr,gear,daydream,windows}]
-                      [-d {0,180,360}] [-e {h264_nvenc,libx264}]
-                      [-t {sbs,ou,mono,2d}] [--verbose]
+usage: psvr_encode.py [-h] -i INPUT [-a {psvr,littlestar}] [-d {0,180,360}]
+                      [-e {h264_nvenc,libx264}] [-t {sbs,ou,mono,2d}]
+                      [--verbose]
 
 optional arguments:
   -h, --help            show this help message and exit
   -i INPUT, --input INPUT
                         Input video or folder path
-  -p {psvr,gear,daydream,windows}, --platform {psvr,gear,daydream,windows}
-                        Specify the platform target
+  -a {psvr,littlestar}, --arguments {psvr,littlestar}
+                        Specify the ffmpeg arguments
   -d {0,180,360}, --degrees {0,180,360}
                         Specify video degrees, or 0 for flat/fixed-frame
   -e {h264_nvenc,libx264}, --encoder {h264_nvenc,libx264}
                         h264_venc for GPU acceleration
   -t {sbs,ou,mono,2d}, --type {sbs,ou,mono,2d}
                         Input video type
-  --verbose             Print original encoding 
+  --verbose             Print original encoding output
 
 ```
 

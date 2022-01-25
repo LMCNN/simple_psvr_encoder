@@ -1,15 +1,30 @@
 {
   "psvr": {
-    "-b:a":"192k",
-    "-ac":"2",
-    "-ar":"48k",
+    "-b:a": "192k",
+    "-ac": "2",
+    "-ar": "48000",
     "-pix_fmt":"yuv420p",
-    "-b:v":"15m",
+    "-b:v":"10M",
     "-bf":"0",
+    "-refs": "1",
     "-threads":"0",
     "-slices":"24",
     "-flags":"+global_header",
-    "-vsync":"0",
-    "-profile:v": "2"
+    "-profile:v": "2",
+    "-vsync": "0"
+  },
+  "littlestar": {
+    "-b:a": "192k",
+    "-ac": "2",
+    "-ar": "48000",
+    "-pix_fmt": "yuv420p",
+    "-b:v": "15000k",
+    "-bf": "0",
+    "-refs": "1",
+    "-threads": "0",
+    "-slices": "24",
+    "-flags": "+global_header",
+    "-profile:v": "2",
+    "-vsync": "0"
   }
 }

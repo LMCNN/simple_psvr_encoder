@@ -48,7 +48,7 @@ def encode_file(ffmpeg_cmd, verbose):
         ffmpeg_cmd.append(arg)
         ffmpeg_cmd.append(data[arg])
 
-    output_postfix = '_' + args.platform + '_' + args.degrees + '_' + args.type + '.mp4'
+    output_postfix = '_' + args.arguments + '_' + args.degrees + '_' + args.type + '.mp4'
 
     output_path = ffmpeg_cmd[2].split('.')[0] + output_postfix
     if os.path.exists(output_path):
@@ -110,11 +110,11 @@ if __name__ == '__main__':
                         help='Input video or folder path',
                         required=True,
                         type=str)
-    parser.add_argument('-p', '--platform',
-                        choices='psvr',
-                        dest='platform',
+    parser.add_argument('-a', '--arguments',
+                        choices=('psvr', 'littlestar'),
+                        dest='arguments',
                         default='psvr',
-                        help='Specify the platform target')
+                        help='Specify the ffmpeg arguments')
     parser.add_argument('-d', '--degrees',
                         choices=('0', '180', '360'),
                         dest='degrees',
@@ -152,7 +152,7 @@ if __name__ == '__main__':
     f = open(os.path.join(base_path, 'ffmpeg_args.json'))
     data = json.load(f)
     f.close()
-    data = data[args.platform]
+    data = data[args.arguments]
 
     input_files = [i[-1] for i in prob_results]
 

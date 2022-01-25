@@ -1,0 +1,15 @@
+{
+  "psvr": {
+    "-b:a":"192k",
+    "-ac":"2",
+    "-ar":"48k",
+    "-pix_fmt":"yuv420p",
+    "-b:v":"15m",
+    "-bf":"0",
+    "-threads":"0",
+    "-slices":"24",
+    "-flags":"+global_header",
+    "-vsync":"0",
+    "-profile:v": "2"
+  }
+}

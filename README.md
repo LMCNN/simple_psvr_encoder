@@ -6,9 +6,9 @@ A simple tool to encode psvr video.
 
 ### Environment setup
 
-1. Install [python]([Download Python | Python.org](https://www.python.org/downloads/)) (don't forget to add python to PATH)
+1. Install [python](https://www.python.org/downloads/) (don't forget to add python to PATH)
 
-2. Download [ffmpeg]([Download FFmpeg](https://www.ffmpeg.org/download.html)), and add ffmpeg/bin to PATH
+2. Download [ffmpeg](https://www.ffmpeg.org/download.html), and add ffmpeg/bin to PATH
 4. Download this tool
 
 ### Encode

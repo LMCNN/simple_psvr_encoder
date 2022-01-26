@@ -6,7 +6,6 @@
     "-pix_fmt":"yuv420p",
     "-b:v":"10M",
     "-bf":"0",
-    "-refs": "1",
     "-slices":"24",
     "-flags":"+global_header",
     "-profile:v": "high",
@@ -19,9 +18,21 @@
     "-pix_fmt": "yuv420p",
     "-b:v": "15000k",
     "-bf": "0",
-    "-refs": "1",
     "-slices": "24",
     "-flags": "+global_header",
+    "-profile:v": "high",
+    "-vsync": "0"
+  },
+  "test": {
+    "-b:a": "384k",
+    "-ac": "2",
+    "-ar": "48k",
+    "-pix_fmt":"yuv420p",
+    "-b:v":"100M",
+    "-bf":"0",
+    "-s": "1920x1920",
+    "-slices":"24",
+    "-flags":"+global_header",
     "-profile:v": "high",
     "-vsync": "0"
   }

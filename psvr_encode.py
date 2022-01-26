@@ -128,7 +128,7 @@ if __name__ == '__main__':
                         required=True,
                         type=str)
     parser.add_argument('-a', '--arguments',
-                        choices=('psvr', 'littlestar'),
+                        choices=('psvr', 'littlestar', 'test'),
                         dest='arguments',
                         default='psvr',
                         help='Specify the ffmpeg arguments')

@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import json
+import shutil
 import argparse
 import subprocess
 
@@ -17,6 +18,8 @@ def create_new_folder(input_folder_path):
     output_folder_name = head_tail[1] + '_output'
     global new_folder_path
     new_folder_path = os.path.join(head_tail[0], output_folder_name)
+    if os.path.exists(new_folder_path):
+        shutil.rmtree(new_folder_path)
     os.mkdir(new_folder_path)
 
 

@@ -7,10 +7,9 @@
     "-b:v":"10M",
     "-bf":"0",
     "-refs": "1",
-    "-threads":"0",
     "-slices":"24",
     "-flags":"+global_header",
-    "-profile:v": "2",
+    "-profile:v": "high",
     "-vsync": "0"
   },
   "littlestar": {
@@ -21,10 +20,9 @@
     "-b:v": "15000k",
     "-bf": "0",
     "-refs": "1",
-    "-threads": "0",
     "-slices": "24",
     "-flags": "+global_header",
-    "-profile:v": "2",
+    "-profile:v": "high",
     "-vsync": "0"
   }
 }

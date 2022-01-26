@@ -1,4 +1,4 @@
-# Simple Psvr Encoder
+# Simple psvr encoder
 
 A simple tool to encode psvr video.
 

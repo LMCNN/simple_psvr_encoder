@@ -9,7 +9,10 @@ A simple tool to encode psvr video.
 1. Install [python](https://www.python.org/downloads/) (don't forget to add python to PATH)
 
 2. Download [ffmpeg](https://www.ffmpeg.org/download.html), and add ffmpeg/bin to PATH
-4. Download this tool
+
+3. Download this tool
+
+
 
 ### Encode
 
@@ -42,11 +45,11 @@ Suppose the input file's path is: D:\test.mp4 , run following command
 python psvr_encode.py -i D:\test.mp4
 ```
 
-then a encoded file(test_psvr_180_sbs.mp4) is generated in the same folder of the input file. The postfix of the the output file is determined by the input arguments.  Default arguments are: psvr, 180, sbs, and libx264.
+then an encoded file(test_psvr_180_sbs.mp4) is generated in the same folder of the input file. The postfix of the output file is determined by the input arguments.  Default arguments are: psvr, 180, sbs, and libx264.
 
 #### Encode files in the same folder
 
-Suppose the folder which contains the input file has following structure:
+Suppose the folder which contains the input files has the following structure:
 
 ```shell
 D:\test 
@@ -61,15 +64,12 @@ Run following command:
 python psvr_encode.py -i D:\test
 ```
 
-then the outputs will be like this:
+then a new folder called test_output will be created and its structure should like this:
 
 ```shell
-D:\test 
-        test1.mkv
+D:\test_output 
         test1_psvr_180_sbs.mp4
-        test2.mkv
         test2_psvr_180_sbs.mp4
-        test3.mp4
         test3_psvr_180_sbs.mp4
 ```
 

@@ -9,6 +9,15 @@ from tqdm import tqdm
 from datetime import datetime
 
 prob_results = []
+new_folder_path = None
+
+
+def create_new_folder(input_folder_path):
+    head_tail = os.path.split(input_folder_path)
+    output_folder_name = head_tail[1] + '_output'
+    global new_folder_path
+    new_folder_path = os.path.join(head_tail[0], output_folder_name)
+    os.mkdir(new_folder_path)
 
 
 def probe_file(input_path):
@@ -49,8 +58,13 @@ def encode_file(ffmpeg_cmd, verbose):
         ffmpeg_cmd.append(data[arg])
 
     output_postfix = '_' + args.arguments + '_' + args.degrees + '_' + args.type + '.mp4'
+    global new_folder_path
+    if new_folder_path:
+        output_file_name = os.path.split(ffmpeg_cmd[2])[1].split('.')[0] + output_postfix
+        output_path = os.path.join(new_folder_path, output_file_name)
+    else:
+        output_path = ffmpeg_cmd[2].split('.')[0] + output_postfix
 
-    output_path = ffmpeg_cmd[2].split('.')[0] + output_postfix
     if os.path.exists(output_path):
         os.remove(output_path)
 
@@ -155,6 +169,9 @@ if __name__ == '__main__':
     data = data[args.arguments]
 
     input_files = [i[-1] for i in prob_results]
+
+    if len(input_files) > 1:
+        create_new_folder(args.input)
 
     print(f'\n################### Encoding ###################')
     for input_file in input_files:

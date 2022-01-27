@@ -2,9 +2,9 @@
   "psvr": {
     "-b:a": "192k",
     "-ac": "2",
-    "-ar": "48000",
+    "-ar": "48k",
     "-pix_fmt":"yuv420p",
-    "-b:v":"10M",
+    "-b:v":"15M",
     "-bf":"0",
     "-slices":"24",
     "-flags":"+global_header",
@@ -14,25 +14,12 @@
   "littlestar": {
     "-b:a": "192k",
     "-ac": "2",
-    "-ar": "48000",
+    "-ar": "48k",
     "-pix_fmt": "yuv420p",
-    "-b:v": "15000k",
+    "-b:v": "15M",
     "-bf": "0",
     "-slices": "24",
     "-flags": "+global_header",
-    "-profile:v": "high",
-    "-vsync": "0"
-  },
-  "test": {
-    "-b:a": "384k",
-    "-ac": "2",
-    "-ar": "48k",
-    "-pix_fmt":"yuv420p",
-    "-b:v":"100M",
-    "-bf":"0",
-    "-s": "1920x1920",
-    "-slices":"24",
-    "-flags":"+global_header",
     "-profile:v": "high",
     "-vsync": "0"
   }

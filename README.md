@@ -45,7 +45,7 @@ Suppose the input file's path is: D:\test.mp4 , run following command
 python psvr_encode.py -i D:\test.mp4
 ```
 
-then an encoded file(test_psvr_180_sbs.mp4) is generated in the same folder of the input file. The postfix of the output file is determined by the input arguments.  Default arguments are: psvr, 180, sbs, and libx264.
+then an encoded file(test_psvr_180_sbs.mp4) is generated in the same folder of the input file. The suffix of the output file is determined by the input arguments.  Default arguments are: psvr, 180, sbs, and libx264.
 
 #### Encode files in the same folder
 
